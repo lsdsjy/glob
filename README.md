@@ -11,6 +11,10 @@ http://lsdsjy.github.io/lblog
 
 ## Usage
 
+- Edit your configuration in `config.json`
+
+- Put your markdown source files of posts in `posts/` and your customized pages in `pages/`
+
 - Run local server
 
 ```
@@ -22,10 +26,6 @@ python sever.py
 ```
 python generate.py
 ```
-
-- Edit your configuration in `config.json`
-
-- Put your markdown source files of posts in `posts/` and your customized pages in `pages/`
 
 ## Customize
 
