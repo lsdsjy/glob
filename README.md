@@ -17,7 +17,7 @@ http://lsdsjy.github.io/lblog
 
 - Edit your configuration in `config.json`
 
-- Put your markdown source files of posts in `posts/` and your customized pages in `pages/`
+- Put your markdown source files of posts in `/posts` and your customized pages in `/pages`
 
 A markdown source file example:
   
@@ -36,13 +36,13 @@ The first line is the *title* of the passage and the second is *date*. There sho
 python sever.py
 ```
 
-- Generating static HTML files
+- Generating static HTML files in `/build`
 
 ```
 python generate.py
 ```
 
-- Upload static files to your site
+- Upload static files in directory `/build` to your site
 
 ## Customize
 
