@@ -31,7 +31,7 @@ python generate.py
 
 lblog uses Jinja2 for HTML templates.
 
-Put your own HTML templates in `templates/theme_name/` and static files (*.css/*.js) in `static/theme_name/`
+Put your own HTML templates in `templates/theme_name/` and static files (`.css/.js`) in `static/theme_name/`
 
 
 ## Dependencies
