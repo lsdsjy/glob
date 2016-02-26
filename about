@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LsdsJy</title>
+   <!--  <link rel="shortcut icon" href="static/favicon.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="static/favicon.png" sizes="16x16" type="image/png"> -->
+    
+    <link rel="stylesheet" type="text/css" href=http://lsdsjy.github.io/lblog/static/default/style.css>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            
+            <div class="title">LsdsJy</div>
+            <div class="navi">
+                <ul>
+                    <li><a href=http://lsdsjy.github.io/lblog>HOME</a></li>
+                    <li><a href=http://lsdsjy.github.io/lblog>ARCHIVE</a></li>
+                    <li><a href=http://lsdsjy.github.io/lblog/about>ABOUT</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div id="main">
+            
+<div class="item">
+    <div class="title">
+    <h2>About
+</h2>
+    </div>
+    <div class="content">
+    <p>It's the About page.</p>
+
+    </div>
+</div>
+<p style="text-align: right;">
+    2014-06-01
+
+</p>
+
+        </div>
+        <div id="footer">
+            Copyright 2015 LsdsJy.
+        </div>
+    </div>
+</body>
+</html>
