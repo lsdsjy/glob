@@ -6,6 +6,9 @@ A simple blog framework powered by Flask.
 - Markdown support
 - Local server to preview
 
+## Sample
+http://lsdsjy.github.io/lblog
+
 ## Usage
 
 - Run local server
