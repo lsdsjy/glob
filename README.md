@@ -28,7 +28,7 @@ The First Passage
 Hello World!
 ```
 
-The first line is the title of the *passage* and the second is *date*. There should be a *seperating line* followed by the *text*.
+The first line is the *title* of the passage and the second is *date*. There should be a *seperating line* followed by the *text*.
 
 - Run local server at `http://localhost:5000/` or `http://127.0.0.1:5000/`
 
