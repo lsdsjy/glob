@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href={{ url }}>HOME</a></li>
                     <li><a href={{ url }}>ARCHIVE</a></li>
-                    <li><a href={{ url + "/about"}}>ABOUT</a></li>
+                    <li><a href={{ url + "/about.html"}}>ABOUT</a></li>
                 </ul>
             </div>
             {% endblock %}
@@ -27,12 +27,10 @@
             {% for post in posts %}
             <div class="item">
                 <div class="title">
-                    <a href={{ url + "/posts/" + post[0] }}>{{ post[1]|escape }}</a>
+                    <a href={{ url + "/posts/" + post[0] + ".html" }}>{{ post[1]|escape }}</a>
                 </div>
                 <div class="content">
-                    <p>
                     {{ post[4]|safe }}
-                    </p>
                 </div>
             </div>
             {% endfor %}
