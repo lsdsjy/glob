@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 fp = open("config.json", "r")
-data = json.loads(''.join(map(lambda x: x.translate(None, '\n'), fp.readlines())))
+data = json.loads("".join(map(lambda x: x.translate(None, "\n"), fp.readlines())))
 fp.close()
 
 title = data["title"]
@@ -21,21 +21,22 @@ pages = {}
 
 
 def fetch(dr):
-    files = os.listdir('source/%s/' % dr)
+    files = os.listdir("source/%s/" % dr)
     for src in files:
         fp = open("source/%s/%s" % (dr, src), "r")
-        lines = [item.decode('utf-8') for item in fp.readlines()]
+        lines = [item.decode("utf-8") for item in fp.readlines()]
         fp.close()
 
-        src = src.rpartition('.')[0]
+        src = src.rpartition(".")[0]
         post_title = lines[0]
         post_date = lines[1]
-        text = ''.join(lines[3:])
-        excerpt = text[:text.find('<!-- more -->')]
+        text = "".join(lines[3:])
+        excerpt = text[:text.find("<!-- more -->")]
         text = markdown2.markdown(text)
         excerpt = markdown2.markdown(excerpt)
+        excerpt += "<p><a href=\"posts/" + src + ".html\">READ MORE-></a></p>"
 
-        if (dr == 'posts'):
+        if (dr == "posts"):
             posts[src] = (src, post_title, post_date,
                           text, excerpt)
         else:
@@ -43,14 +44,14 @@ def fetch(dr):
                           text, excerpt)
 
 
-@app.route('/')
+@app.route("/")
 def index():
     return render_template(theme + "/index.html", url=url,
                            title=title, theme=theme, author=author,
                            posts=posts.values())
 
 
-@app.route('/posts/<post_url>')
+@app.route("/posts/<post_url>.html")
 def post(post_url, is_post=True):
     p = posts[post_url] if is_post else pages[post_url]
     return render_template(theme + "/post.html", url=url,
@@ -59,12 +60,12 @@ def post(post_url, is_post=True):
                            post_date=p[2])
 
 
-@app.route('/<post_url>')
+@app.route("/<post_url>.html")
 def page(post_url):
     return post(post_url, False)
 
 
 if __name__ == "__main__":
-    fetch('posts')
-    fetch('pages')
+    fetch("posts")
+    fetch("pages")
     app.run(debug=True)
