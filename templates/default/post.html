@@ -1,15 +1,15 @@
-{% extends theme + "/base.html" %}
-{% block title %}{{ title }}{% endblock %}
+{% extends site.theme + "/base.html" %}
+{% block title %}{{ site.title }}{% endblock %}
 {% block main %}
 <div class="item">
     <div class="title">
-    <h2>{{ post_title }}</h2>
+    <h2>{{ post.title }}</h2>
     </div>
     <div class="content">
-    {{ text|safe }}
+    {{ post.text|safe }}
     </div>
 </div>
 <p style="text-align: right;">
-    {{ post_date }}
+    {{ post.date }}
 </p>
 {% endblock %}

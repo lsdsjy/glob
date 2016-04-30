@@ -1,2 +1,14 @@
-{% extends theme + "/base.html" %}
-{% block title %}{{ title }}{% endblock %}
+{% extends site.theme + "/base.html" %}
+{% block title %}{{ site.title }}{% endblock %}
+{% block main %}
+    {% for post in posts %}
+    <div class="item">
+        <div class="title">
+            <a href={{ site.url + "/posts/" + posts[post].src + ".html" }}>{{ posts[post].title|escape }}</a>
+        </div>
+        <div class="content">
+            {{ posts[post].excerpt|safe }}
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

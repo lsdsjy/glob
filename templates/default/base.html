@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-   <!--  <link rel="shortcut icon" href="static/favicon.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="static/favicon.png" sizes="16x16" type="image/png"> -->
+    <!-- <link rel="shortcut icon" href="static/image/favicon.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="static/image/favicon.png" sizes="16x16" type="image/png"> -->
     {% block css %}
-    <link rel="stylesheet" type="text/css" href={{ url + "/static/default/style.css" }}>
+    <link rel="stylesheet" type="text/css" href={{ site.url + "/static/css/default/style.css" }}>
     {% endblock %}
 </head>
 <body>
@@ -15,29 +15,19 @@
             <div class="title">LsdsJy</div>
             <div class="navi">
                 <ul>
-                    <li><a href={{ url }}>HOME</a></li>
-                    <li><a href={{ url }}>ARCHIVE</a></li>
-                    <li><a href={{ url + "/about.html"}}>ABOUT</a></li>
+                    <li><a href={{ site.url }}>HOME</a></li>
+                    <li><a href={{ site.url }}>ARCHIVE</a></li>
+                    <li><a href={{ site.url + "/about.html"}}>ABOUT</a></li>
                 </ul>
             </div>
             {% endblock %}
         </div>
         <div id="main">
             {% block main %}
-            {% for post in posts %}
-            <div class="item">
-                <div class="title">
-                    <a href={{ url + "/posts/" + post[0] + ".html" }}>{{ post[1]|escape }}</a>
-                </div>
-                <div class="content">
-                    {{ post[4]|safe }}
-                </div>
-            </div>
-            {% endfor %}
             {% endblock %}
         </div>
         <div id="footer">
-            Copyright {{ 2015 }} {{ author }}.
+            Copyright {{ 2015 }} {{ site.author }}.
         </div>
     </div>
 </body>
