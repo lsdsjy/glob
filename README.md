@@ -1,4 +1,4 @@
-# lblog
+# Glob
 
 A simple blog framework powered by Flask.
 
@@ -8,7 +8,6 @@ A simple blog framework powered by Flask.
 
 - Local server to preview
 
-- Deploy to Github Pages (coming soon)
 
 ## Sample
 http://lsdsjy.github.io/lblog
@@ -20,7 +19,7 @@ http://lsdsjy.github.io/lblog
 - Put your markdown source files of posts in `/posts` and your customized pages in `/pages`
 
 A markdown source file example:
-  
+
 ```
 The First Passage
 2016-02-26
@@ -46,7 +45,7 @@ python generate.py
 
 ## Customize
 
-lblog uses Jinja2 for HTML templates.
+Glob uses Jinja2 for HTML templates.
 
 Put your own HTML templates in `templates/theme_name/` and static files (`.css/.js`) in `static/theme_name/`
 
@@ -55,7 +54,6 @@ Put your own HTML templates in `templates/theme_name/` and static files (`.css/.
 - Flask
 - Frozen-Flask
 - Jinja2
-- Werkzeug
 
 ## License
 
